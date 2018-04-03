@@ -1,4 +1,4 @@
-/// <reference path="../../node_modules/monaco-editor/monaco.d.ts" />
+/// <reference path="../typings/monaco-editor/monaco.d.ts" />
 import {Injectable, ElementRef, Optional, Inject, NgZone} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {Subject} from 'rxjs/Subject';
