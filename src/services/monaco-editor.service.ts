@@ -1,4 +1,4 @@
-/// <reference path="../typings/monaco-editor/monaco.d.ts" />
+/// <reference path="../../node_modules/monaco-editor/monaco.d.ts" />
 import {Injectable, ElementRef, Optional, Inject, NgZone} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {Subject} from 'rxjs/Subject';
@@ -49,6 +49,14 @@ export class MonacoEditorService {
 
 	get editor() {
 		return this.monacoEditor;
+	}
+
+	public setDefaultJavascriptCompilerOptions(compilerOptions: monaco.languages.typescript.CompilerOptions) {
+		monaco.languages.typescript.javascriptDefaults.setCompilerOptions(compilerOptions);
+	}
+
+	public addDefaultJavascriptExtraLib(code: string, filename?: string) {
+		monaco.languages.typescript.javascriptDefaults.addExtraLib(code, filename);
 	}
 
 	private registerCompletionProviders() {
