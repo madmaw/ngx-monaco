@@ -16,8 +16,7 @@
     "lint": "tslint -p . --format stylish",
     "build": "npm run copy:typings && ng-packagr -p package.json",
     "release": "npm run build && cd dist && npm publish && cd ..",
-    "copy:typings": "cpy node_modules/monaco-editor/monaco.d.ts src/typings/monaco-editor",
-    "install": "npm run build"
+    "copy:typings": "cpy node_modules/monaco-editor/monaco.d.ts src/typings/monaco-editor"
   },
   "keywords": [
     "angular",
